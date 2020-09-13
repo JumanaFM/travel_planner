@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>✈️ Travel Planner</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="">
+            ✈️ Travel Planner
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <p id="error-msg"></p>
+        </section>
+        <section>
+            <form>
+                <input id="city" type="text" name="input" value="" placeholder="City name...">
+                <input id="date-start" type="text" name="input" value="" placeholder="Travel start date MM/DD/YYYY">
+                <input id="date-end" type="text" name="input" value="" placeholder="Travel end date MM/DD/YYYY">
+                <input id="btn-submit" type="submit" name="" value="submit">
+            </form>
+        </section>
+        <section>
+            <article id="travel-result" style="display: none;">
+                <img id="travel-img" class="item" src="" alt="Travel img">
+                <div>
+                    <p id="travel-name" class="item"></p>
+                    <p id="travel-weather" class="item"></p>
+                    <p id="travel-duration" class="item"></p>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>✈️</p>
+    </footer>
+
+</body>
+<script>
+    // Check that service workers are supported
+    if ('serviceWorker' in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js');
+        });
+    }
+</script>
+
+</html>

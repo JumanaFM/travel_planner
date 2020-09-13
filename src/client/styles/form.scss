@@ -1,0 +1,23 @@
+form {
+    border: 10px solid #444;
+    padding: 40px;
+}
+
+input {
+    font-family: monospace;
+    padding: 5px 20px;
+    width: 100%;
+    line-height: 16px;
+    margin: 10px 0;
+    border-color: #fff;
+    &:hover {
+        border-color: rgb(216, 213, 213);
+    }
+}
+
+@media(max-width: 800px) {
+    form {
+        border-right-width: 0px;
+        border-left-width: 0px;
+    }
+}
